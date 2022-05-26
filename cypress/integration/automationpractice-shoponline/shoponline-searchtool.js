@@ -1,11 +1,10 @@
-describe('onlineshop', () => {
+describe('onlineshop- search tool', () => {
     beforeEach(() => {
         cy.visit('http://automationpractice.com/')
 
     });
 
-    context('search tool', () => {
-        it('can search products by name- t-shirt', () => {
+    it('shows products labeled as "t-shirt"', () => {
 
             let newItem = "t-shirt"
             cy.get('#search_query_top')
@@ -17,7 +16,7 @@ describe('onlineshop', () => {
             cy.get('.product-count').should('include.text', 'Showing 1 - 1 of 1 item')
         })
 
-        it('shows O when writting wrong phrase-tshirt', () => {
+    it('shows O when writting wrong phrase-tshirt, shows phrase: "No results"', () => {
 
             cy.get('#search_query_top')
                 .type(`tshirt{enter}`)
@@ -26,7 +25,11 @@ describe('onlineshop', () => {
             cy.get('.alert.alert-warning').should('include.text', 'No results')
         })
 
+
+    it('shows all products, that have in their name specific phrase "printed dress"', () => {
+        cy.get('#search_query_top')
+        .type(`printed dress{enter}`)
+        cy.get()
     })
-
-
+        
 })

@@ -1,0 +1,30 @@
+cartbutton:
+
+1 Scenario: onlineshop-cartbutton - number of item
+Given no item added to cart
+When adding 1 item to cart
+Then shows number of items in shopping cart changed into 1
+
+2 Scenario: onlineshop-cartbutton -pop up
+Given no item added to cart, 
+When add 1 item to cart
+Then shows pop up with sentence: There are 1 items in your cart.
+
+searchtool:
+
+1 Scenario: onlineshop-search tool- t-shirt
+Given empty search tool, basic front page loaded
+When enter product name 't-shirt' into search tool
+Then shows products labeled as 't-shirt'
+
+2 Scenario: onlineshop-search tool-search tool- wrong item name
+Given empty search tool, basic front page loaded
+When enter wrong product name 'tshirt' into search tool
+Then shows shows O when writting wrong phrase-tshirt
+Then shows shows phrase: "No results""
+
+
+3 Scenario: onlineshop-search tool- specific phrase
+Given empty search tool, basic front page loaded
+When enter specific item name - "printed dress"
+Then  shows all products, that have in their name specific phrase "printed dress"
