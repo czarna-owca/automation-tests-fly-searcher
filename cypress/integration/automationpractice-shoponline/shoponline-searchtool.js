@@ -1,8 +1,8 @@
 describe('onlineshop- search tool', () => {
+    
     beforeEach(() => {
         cy.visit('http://automationpractice.com/')
-
-    });
+            });
 
     it('shows products labeled as "t-shirt"', () => {
 
@@ -29,7 +29,7 @@ describe('onlineshop- search tool', () => {
     it('shows all products, that have in their name specific phrase "printed dress"', () => {
         cy.get('#search_query_top')
         .type(`printed dress{enter}`)
-        cy.get()
+        cy.get('.lighter').should('contain.text','printed dress')
     })
         
 })
