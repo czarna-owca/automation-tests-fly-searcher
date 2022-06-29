@@ -8,8 +8,8 @@ module.exports = defineConfig({
       return require('./cypress/plugins/index.js')(on, config)
     },
 
-    "baseUrl": "http://automationpractice.com"
-
+    "baseUrl": "http://automationpractice.com",
+    "specPattern": "**/*.feature",
 
   },
 })

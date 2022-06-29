@@ -14,8 +14,11 @@ describe('login test', () => {
         cy.get('#passwd').type(newPassword)
         cy.get('#SubmitLogin > span').click();
         cy.get('#center_column').should('contain', 'My account');
+        cy.url().should('contain', 'index.php?controller=my-account')
         cy.get('.logout').click()
         cy.get('.page-heading').should('contain', 'Authentication');
 
     });
+
+
 })

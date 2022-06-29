@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "cypress": "^10.2.0"
+    "cypress": "^10.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "scripts": {
     "test": "npx cypress open"
@@ -20,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/czarna-owca/automation-tests-fly-searcher/issues"
   },
-  "homepage": "https://github.com/czarna-owca/automation-tests-fly-searcher#readme"
+  "homepage": "https://github.com/czarna-owca/automation-tests-fly-searcher#readme",
+ 
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+  
+
 }
