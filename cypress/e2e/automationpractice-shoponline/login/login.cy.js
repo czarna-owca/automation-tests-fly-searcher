@@ -7,13 +7,28 @@ Given('open home page and click on sign in button', () => {
 
 When('Enter the Email address {string}', (username) => {
 
-    cy.get('#email').type(newLogin)
+    //cy.get('#email').type(newLogin)
+    cy.get('#email').type(username)
 })
 
-     And  enter the password '123456'
-     And click on sign in button
-     Then  The user is successfully logged in
+And('Enter the password {string}', (password) => {
+    cy.get('#passwd').type(newPassword)
 
-    cy.get('#email').type(newLogin)
-cy.get('#passwd').type(newPassword)
-cy.get('#SubmitLogin > span').click();
+})
+
+
+And('Click on sign in button', () => {
+
+    cy.get('#SubmitLogin > span').click()
+})
+
+Then('The user is successfully logged in', () => {
+    cy.get('#center_column').should('contain', 'My account');
+    cy.url().should('contain', 'index.php?controller=my-account')
+
+})
+
+
+Then('The user will received message {string}', (message) => {
+    cy.get('#center_column').should('have.text', message)
+})
