@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "esbuild": "^0.14.48"
+  },
   "devDependencies": {
-    "cypress": "^10.2.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "@badeball/cypress-cucumber-preprocessor": "^11.3.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "cypress": "^10.2.0"
   },
   "scripts": {
     "test": "npx cypress open"
@@ -22,10 +26,9 @@
     "url": "https://github.com/czarna-owca/automation-tests-fly-searcher/issues"
   },
   "homepage": "https://github.com/czarna-owca/automation-tests-fly-searcher#readme",
- 
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+  
+    "stepDefinitions": "cypress/e2e/cucumber-test/**/*.{js,ts}"
   }
   
-
 }

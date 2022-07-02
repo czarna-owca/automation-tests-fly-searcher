@@ -10,14 +10,14 @@ describe('onlineshop-cartbutton', () => {
 
 
     it('number of items in shopping cart changed into 1', () => {
-        cy.get('.cross').click()
+        //cy.get('.cross').click()
         cy.get('[title="View my shopping cart"] > .ajax_cart_quantity').should('contain.text', '1')
 
     })
 
     it('it moves into shopping cart summary', () => {
-        cy.get('.cross').click()
-        { force: true }
+        // cy.get('.cross').click()
+        // { force: true }
         cy.get('[title="View my shopping cart"]').click()
         cy.get('#cart_title').should('be.visible')
             .and('contain.text', 'Shopping-cart summary')
