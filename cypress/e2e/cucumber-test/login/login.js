@@ -45,4 +45,16 @@ Then('A user will be successfully logged out', () => {
     cy.get('.page-heading').should('contain', 'Authentication')
 })
 
+And('A user enters the wrongpassword {string}', (wrongpassword) => {
+
+    homeLoginPage.typePassword(wrongpassword)
+})
+
+
+Then('A user will received message {string}', (message) => {
+
+    cy.get('[class="alert alert-danger"]').should('contain', message);
+
+})
+
 

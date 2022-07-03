@@ -5,7 +5,8 @@ class homeLoginPage {
         passwordInput: () => cy.get('#passwd'),
         loginBtn: () => cy.get('#SubmitLogin > span'),
         logoutBtn: () => cy.get('.logout'),
-        signinBtn: () => cy.get('.login')
+        signinBtn: () => cy.get('.login'),
+
     }
 
     typeUsername(username) {
