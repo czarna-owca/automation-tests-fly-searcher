@@ -47,7 +47,7 @@ Then('A user will be successfully logged out', () => {
 
 And('A user enters the wrongpassword {string}', (wrongpassword) => {
 
-    homeLoginPage.typePassword(wrongpassword)
+    homeLoginPage.typePassword()
 })
 
 
@@ -55,6 +55,14 @@ Then('A user will received message {string}', (message) => {
 
     cy.get('[class="alert alert-danger"]').should('contain', message);
 
+})
+
+When('A user enters the wrongg credentials', (table) => {
+    console.log(table)
+    table.hashes().forEach(row => {
+        console.log(row.username)
+        console.log(row.password)
+    })
 })
 
 
