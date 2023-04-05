@@ -25,13 +25,6 @@ When adding 1 item to cart
 Then shows number of items in shopping cart changed into 1
 
 2 Scenario: onlineshop-cartbutton -pop up
-Given no item added to cart, 
+Given no item added to cart
 When add 1 item to cart
-Then shows pop up with sentence: There are 1 items in your cart.
-
-pop up:
-
-4 Scenario: onlineshop-pop up
-Given
-When 
-Then 
+Then shows pop up with sentence: There are 1 items in your cart

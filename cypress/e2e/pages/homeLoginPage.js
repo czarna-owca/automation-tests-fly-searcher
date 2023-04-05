@@ -6,7 +6,6 @@ class homeLoginPage {
         loginBtn: () => cy.get('#SubmitLogin > span'),
         logoutBtn: () => cy.get('.logout'),
         signinBtn: () => cy.get('.login'),
-
     }
 
     typeUsername(username) {
@@ -28,7 +27,6 @@ class homeLoginPage {
     clickSignin() {
         this.elements.signinBtn().click()
     }
-
 }
 
 module.exports = new homeLoginPage();

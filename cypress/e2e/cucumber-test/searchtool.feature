@@ -1,8 +1,8 @@
 Feature: searchtool Feature
 
     Background:
-        Given A user openes a home page
+        Given Home page is displayed
 
-    Scenario: success searching - 't-shirt'
-        When A user enters the product name "t-shirt" into search tool and clicks enter
-        Then Page shows all products labeled as t-shirt
+    Scenario: 1. success searching
+        When Enter product name "dress" into search tool and click enter
+        Then Page shows all products labeled as "dress"

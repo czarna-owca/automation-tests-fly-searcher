@@ -1,63 +1,66 @@
 import { Given, When, And, Then } from '@badeball/cypress-cucumber-preprocessor';
 const homeLoginPage = require('../../pages/homeLoginPage')
 
-Given('A user openes a home page and click on sign in button', () => {
+Given('Open a home page and click on sign in button', () => {
 
-    cy.visit("/");
+    cy.visit("http://automationpractice.pl/");
     homeLoginPage.clickSignin()
 })
 
-When('A user enters the username {string}', (username) => {
+
+When('Enter username {string}', (username) => {
 
     homeLoginPage.typeUsername(username)
 })
 
-And('A user enters the password {string}', (password) => {
+And('Enter password {string}', (password) => {
 
     homeLoginPage.typePassword(password)
 })
 
 
-And('A user clicks on green sign in button- loginbtn', () => {
+And('Click on green sign in button- loginbtn', () => {
 
     homeLoginPage.clickLogin()
 })
 
-Then('A user will be successfully logged in', () => {
+Then('Successfully logged in', () => {
 
     cy.url().should('contains', '/index.php?controller=my-account')
 })
 
 
-Then('A user will receive message {string}', (message) => {
 
-    cy.get('#center_column').should('contain', message);
+When('Enter username {string}', (username) => {
 
+    homeLoginPage.typeUsername(username)
 })
 
-And('A user clicks on sign out button', () => {
+And('Enter password {string}', (password) => {
+
+    homeLoginPage.typePassword(password)
+})
+
+
+And('Click on green sign in button- loginbtn', () => {
+
+    homeLoginPage.clickLogin()
+})
+
+And('Click on sign out button', () => {
 
     homeLoginPage.clickLogout()
 })
 
-Then('A user will be successfully logged out', () => {
+Then('Successfully logged out', () => {
 
     cy.get('.page-heading').should('contain', 'Authentication')
 })
 
-And('A user enters the wrongpassword {string}', (wrongpassword) => {
-
-    homeLoginPage.typePassword()
-})
 
 
-Then('A user will received message {string}', (message) => {
 
-    cy.get('[class="alert alert-danger"]').should('contain', message);
-
-})
-
-When('A user enters the wrongg credentials', (table) => {
+When('Enter wrong credentials in login boxes', (table) => {
     console.log(table)
     table.hashes().forEach(row => {
         console.log(row.username)
@@ -66,3 +69,8 @@ When('A user enters the wrongg credentials', (table) => {
 })
 
 
+Then('Receive message {string}', (message) => {
+
+    cy.get('[class="alert alert-danger"]').should('contain', message);
+
+})

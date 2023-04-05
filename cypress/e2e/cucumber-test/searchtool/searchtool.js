@@ -1,16 +1,16 @@
 import { Given, When, And, Then } from '@badeball/cypress-cucumber-preprocessor';
 const searchtoolPage = require('../../pages/searchtoolPage')
 
-Given('A user openes a home page', () => {
-    cy.visit("/");
+Given('Home page is displayed', () => {
+    cy.visit("http://automationpractice.pl//");
 })
 
-When('A user enters the product name {string} into search tool and clicks enter', (productname) => {
+When('Enter product name {string} into search tool and click enter', (productname) => {
 
     searchtoolPage.typeProductName(productname)
 })
 
-Then('Page shows all products labeled as t-shirt', () => {
+Then('Page shows all products labeled as {string}', () => {
 
 
 })
