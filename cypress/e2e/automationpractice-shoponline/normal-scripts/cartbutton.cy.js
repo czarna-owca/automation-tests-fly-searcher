@@ -3,7 +3,7 @@ describe('onlineshop-cartbutton', () => {
     beforeEach(() => {
         let newItem = "t-shirt"
         
-        cy.visit('http://automationpractice.pl//')
+        cy.visit('/')
         cy.get('#search_query_top').type(`${newItem}{enter}`)
         cy.get('.right-block > .button-container').click()
     })

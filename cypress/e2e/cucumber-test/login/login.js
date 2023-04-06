@@ -3,7 +3,7 @@ const homeLoginPage = require('../../pages/homeLoginPage')
 
 Given('Open a home page and click on sign in button', () => {
 
-    cy.visit("http://automationpractice.pl/");
+    cy.visit("/");
     homeLoginPage.clickSignin()
 })
 

@@ -1,7 +1,7 @@
 describe('login test', () => {
 
     beforeEach(() => {
-        cy.visit('http://automationpractice.pl/')
+        cy.visit('/')
      });
 
     it('Success login/logout', () => {

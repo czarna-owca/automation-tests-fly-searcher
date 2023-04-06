@@ -1,7 +1,7 @@
 describe('pop-up test', () => {
 
     beforeEach(() => {
-        cy.visit('http://automationpractice.pl//')
+        cy.visit('/')
     });
 
     it('shows pop up', () => {

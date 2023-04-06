@@ -9,7 +9,7 @@ module.exports = defineConfig({
       return require('./cypress/plugins/index.js')(on, config)
     },
 
-    baseUrl: "http://automationpractice.com",
+    baseUrl: "http://automationpractice.pl/",
 
     specPattern: ["**/*.feature", "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}"],
 

@@ -3,7 +3,7 @@ describe('onlineshop- search tool', () => {
     const newItem = "t-shirt";
 
     beforeEach(() => {
-        cy.visit('http://automationpractice.pl/')
+        cy.visit('/')
     });
 
     it('shows products labeled as "t-shirt"', () => {
