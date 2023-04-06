@@ -1,11 +1,11 @@
 describe('onlineshop-cartbutton', () => {
    
     beforeEach(() => {
-        let newItem = "t-shirt"
+        let newItem = "dress"
         
         cy.visit('/')
         cy.get('#search_query_top').type(`${newItem}{enter}`)
-        cy.get('.right-block > .button-container').click()
+        cy.get(':nth-child(1) > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span').click()
     })
 
     it('number of items in shopping cart changed into 1', () => {
