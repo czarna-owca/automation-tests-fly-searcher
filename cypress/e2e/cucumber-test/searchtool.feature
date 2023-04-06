@@ -5,4 +5,4 @@ Feature: searchtool Feature
 
   Scenario: 1. success searching
     When Enter product name "dress" into search tool and click enter
-        Then Page shows all products labeled as "dress"
+        Then Page shows  product labeled as "dress"

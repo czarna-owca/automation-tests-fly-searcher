@@ -10,7 +10,8 @@ When('Enter product name {string} into search tool and click enter', (productnam
     searchtoolPage.typeProductName(productname)
 })
 
-Then('Page shows all products labeled as {string}', () => {
+When('Page shows  product labeled as {string}', () => {
 
-
+    cy.get('.heading-counter').should('include.text', 'result has been found.')
 })
+
