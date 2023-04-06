@@ -1,8 +1,8 @@
 import { Given, When, And, Then } from '@badeball/cypress-cucumber-preprocessor';
+import { when } from 'cypress/types/jquery';
 const homeLoginPage = require('../../pages/homeLoginPage')
 
 Given('Open a home page and click on sign in button', () => {
-
     cy.visit("/");
     homeLoginPage.clickSignin()
 })
@@ -17,7 +17,6 @@ And('Enter password {string}', (password) => {
 
     homeLoginPage.typePassword(password)
 })
-
 
 And('Click on green sign in button- loginbtn', () => {
 
@@ -41,7 +40,6 @@ And('Enter password {string}', (password) => {
     homeLoginPage.typePassword(password)
 })
 
-
 And('Click on green sign in button- loginbtn', () => {
 
     homeLoginPage.clickLogin()
@@ -59,7 +57,6 @@ Then('Successfully logged out', () => {
 
 
 
-
 When('Enter wrong credentials in login boxes', (table) => {
     console.log(table)
     table.hashes().forEach(row => {
@@ -68,9 +65,8 @@ When('Enter wrong credentials in login boxes', (table) => {
     })
 })
 
-
 Then('Receive message {string}', (message) => {
 
     cy.get('[class="alert alert-danger"]').should('contain', message);
-
 })
+
