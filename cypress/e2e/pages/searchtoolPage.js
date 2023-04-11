@@ -2,18 +2,16 @@ class searchtoolPage {
 
     elements = {
         searchInput: () => cy.get('#search_query_top'),
-        //loginBtn: () => cy.get('#SubmitLogin > span'),
+        searchBtn: () => cy.get('#searchbox > .btn')
     }
 
     typeProductName(productname) {
-        this.elements
-            .productNameInput()
-            .type(productname);
+        this.elements.searchInput().type(productname);
     }
 
-    // clickLogin() {
-    //     this.elements.loginBtn().click();
-    // }
+    clickSearch() {
+        this.elements.searchBtn().click();
+    }
 }
 
 module.exports = new searchtoolPage();

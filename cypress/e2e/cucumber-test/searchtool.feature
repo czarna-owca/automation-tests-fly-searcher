@@ -4,5 +4,6 @@ Feature: searchtool Feature
     Given Home page is displayed
 
   Scenario: 1. success searching
-    When Enter product name "dress" into search tool and click enter
-        Then Page shows  product labeled as "dress"
+    When Enter product name "dress" into search tool
+    And Click on searchtool button
+    Then Page shows product labeled as "dress"

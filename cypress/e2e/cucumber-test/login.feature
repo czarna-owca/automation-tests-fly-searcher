@@ -20,7 +20,7 @@ Feature: Login Feature
     And Enter wrong credentials in login boxes
 
       | username    | password          |
-      #| df@fmsd.com |            123456 |
+      | df@fmsd.com |            123456 |
       | df@fmsd.com | incorrectpassword |
     
     And Click on green sign in button- loginbtn

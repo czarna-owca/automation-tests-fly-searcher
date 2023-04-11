@@ -5,13 +5,15 @@ Given('Home page is displayed', () => {
     cy.visit("/");
 })
 
-When('Enter product name {string} into search tool and click enter', (productname) => {
+When('Enter product name {string} into search tool', (productname) => {
 
     searchtoolPage.typeProductName(productname)
 })
 
-When('Page shows  product labeled as {string}', () => {
-
-    cy.get('.heading-counter').should('include.text', 'result has been found.')
+And('Click on searchtool button', () => {
+    searchtoolPage.clickSearch()
 })
 
+Then('Page shows product labeled as {string}', () => {
+    cy.get('.heading-counter').should('contain', 'results have been found.')
+})
