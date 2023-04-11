@@ -28,22 +28,6 @@ Then('Successfully logged in', () => {
 })
 
 
-
-// When('Enter username {string}', (username) => {
-
-//     homeLoginPage.typeUsername(username)
-// })
-
-// And('Enter password {string}', (password) => {
-
-//     homeLoginPage.typePassword(password)
-// })
-
-// And('Click on green sign in button- loginbtn', () => {
-
-//     homeLoginPage.clickLogin()
-// })
-
 And('Click on sign out button', () => {
 
     homeLoginPage.clickLogout()
@@ -55,17 +39,20 @@ Then('Successfully logged out', () => {
 })
 
 
+And('Enter wrongPassword {string}', (password) => {
 
-When('Enter wrong credentials in login boxes', (table) => {
-    console.log(table)
-    table.hashes().forEach(row => {
-        console.log(row.username)
-        console.log(row.password)
-    })
+    homeLoginPage.typePassword(password)
 })
+
 
 Then('Receive message {string}', (message) => {
 
     cy.get('[class="alert alert-danger"]').should('contain', message);
 })
+
+
+
+
+
+
 

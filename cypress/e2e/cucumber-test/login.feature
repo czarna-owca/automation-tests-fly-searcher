@@ -16,12 +16,23 @@ Feature: Login Feature
     And Click on sign out button
     Then Successfully logged out
 
-  Scenario: 3. incorrect credentials
-    And Enter wrong credentials in login boxes
-
-      | username    | password          |
-      | df@fmsd.com |            123456 |
-      | df@fmsd.com | incorrectpassword |
-    
+  Scenario: Incorrect credentials
+    When Enter username "df@fmsd.com"
+    And Enter wrongPassword "incorrectpassword"
     And Click on green sign in button- loginbtn
     Then Receive message "Authentication failed"
+    
+
+    
+    # Przyklad tabeli:
+    # When  Enter username "<username>"
+    # And Enter password "<password>"
+    # And Click on green sign in button- loginbtn
+    # Then Receive message "Authentication failed"
+    
+    # Examples:
+    #    | username | password |
+    #    | df@fmsd.com |            123456 |
+    #    | df@fmsd.com | incorrectpassword |
+    
+    
