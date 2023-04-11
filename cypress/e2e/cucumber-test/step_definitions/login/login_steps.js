@@ -1,5 +1,5 @@
 import { Given, When, And, Then } from '@badeball/cypress-cucumber-preprocessor';
-const homeLoginPage = require('../../pages/homeLoginPage')
+const homeLoginPage = require('../../../pages/homeLoginPage')
 
 Given('Open a home page and click on sign in button', () => {
     cy.visit("/");
