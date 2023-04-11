@@ -6,7 +6,6 @@ Given('Open a home page and click on sign in button', () => {
     homeLoginPage.clickSignin()
 })
 
-
 When('Enter username {string}', (username) => {
 
     homeLoginPage.typeUsername(username)
@@ -27,7 +26,6 @@ Then('Successfully logged in', () => {
     cy.url().should('contains', '/index.php?controller=my-account')
 })
 
-
 And('Click on sign out button', () => {
 
     homeLoginPage.clickLogout()
@@ -38,12 +36,10 @@ Then('Successfully logged out', () => {
     cy.get('.page-heading').should('contain', 'Authentication')
 })
 
-
 And('Enter wrongPassword {string}', (password) => {
 
     homeLoginPage.typePassword(password)
 })
-
 
 Then('Receive message {string}', (message) => {
 
