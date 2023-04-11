@@ -29,20 +29,20 @@ Then('Successfully logged in', () => {
 
 
 
-When('Enter username {string}', (username) => {
+// When('Enter username {string}', (username) => {
 
-    homeLoginPage.typeUsername(username)
-})
+//     homeLoginPage.typeUsername(username)
+// })
 
-And('Enter password {string}', (password) => {
+// And('Enter password {string}', (password) => {
 
-    homeLoginPage.typePassword(password)
-})
+//     homeLoginPage.typePassword(password)
+// })
 
-And('Click on green sign in button- loginbtn', () => {
+// And('Click on green sign in button- loginbtn', () => {
 
-    homeLoginPage.clickLogin()
-})
+//     homeLoginPage.clickLogin()
+// })
 
 And('Click on sign out button', () => {
 
