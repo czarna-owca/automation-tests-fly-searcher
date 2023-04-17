@@ -22,8 +22,14 @@ Feature: Login Feature
     And Click on green sign in button- loginbtn
     Then Receive message "Authentication failed"
 
+  Scenario: 4 empty login credentials
+    When Click on green sign in button- loginbtn
+    Then Receive message "An email address required."
+
 
     
+
+  
     # Przyklad tabeli:
     # When  Enter username "<username>"
     # And Enter password "<password>"

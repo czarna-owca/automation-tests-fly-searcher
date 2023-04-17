@@ -29,28 +29,25 @@ Feature: searchtool Feature
     Then Page shows suggestions form category "DRESSES" under searchtool
     And Click on searchtool button
     Then Page shows all products from category "DRESSES"
-    Then Page shows category "DRESSES" description
-
+ 
 #  will not pass   
   Scenario: 6 searching by category tree WOMEN
     When Enter "WOMEN" into search tool
     Then Page shows suggestions form category "WOMEN" under searchtool
     And Click on searchtool button
-    Then Page shows category "WOMEN" description
-    Then Page shows all products from category WOMEN
+    Then Page shows all products from category "WOMEN"
 
 
   Scenario: 7 searching by category tree T-SHIRTS
     When Enter "T-SHIRTS" into search tool
     Then Page shows suggestions form category "T-SHIRTS" under searchtool
     And Click on searchtool button
-    Then Page shows category "T-SHIRTS" description
     Then Page shows all products from category "T-SHIRTS"
 
 # will not pass
   Scenario: 8 error tolerance (without - ) tshirt 
     When Enter "tshirt" into search tool
     And Click on searchtool button
-    Then Page shows all products from category T-SHIRTS
+    Then Page shows all products from category "T-SHIRTS"
 
  

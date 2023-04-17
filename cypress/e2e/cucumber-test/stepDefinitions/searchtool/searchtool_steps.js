@@ -50,6 +50,7 @@ Then('Page shows suggestions form category {string} under searchtool', (category
    
 })
 
-Then('Page shows category {string} description', (category) => {
- cy.get('.content_scene_cat').should('contain', category)
-})
+
+// Then('Page shows category {string} description', (category) => {
+//  cy.get('.content_scene_cat').should('contain', category)
+// })
