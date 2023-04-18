@@ -20,7 +20,7 @@ Then('Page shows only products with productName {}', () =>{
  })
 
 And('Enter {string} into search tool', (productname) => {
-    searchtoolPage.typeProductName(productname)
+    searchtoolPage.typeProductName(`${productname}, {enter}`)
 })
 
 Then('Receive message: {string}', (message) => {
@@ -53,4 +53,9 @@ Then('Page shows suggestions form category {string} under searchtool', (category
 
 // Then('Page shows category {string} description', (category) => {
 //  cy.get('.content_scene_cat').should('contain', category)
+// })
+
+
+// Then('Page shows all products from category "T-SHIRTS"', (category) => {
+
 // })
