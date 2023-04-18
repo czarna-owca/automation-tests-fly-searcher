@@ -2,6 +2,7 @@ class popupPage  {
     elements ={
         proceedBtn: () => cy.get('.btn btn-default button button-medium'),
         continueBtn: () => cy.get('.continue btn btn-default button exclusive-medium')
+        
 }
     
     clickProceed() {
